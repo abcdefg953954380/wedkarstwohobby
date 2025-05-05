@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: cyan;
+    color: #333;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.czemu,
+.fakty {
+    margin-bottom: 30px;
+}
+
+.ciekawostki ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animacja emotki */
+.rybka {
+    display: inline-block;
+    animation: plywanie 2s ease-in-out infinite;
+    margin-left: 10px;
+}
+
+@keyframes plywanie {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
