@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: linear-gradient(to left, blue, cyan);
+    color: black;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+}
+
+.galeria {
+    margin: 40px auto;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.przycisk {
+    padding: 12px 20px;
+    background-color: #0077b6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.przycisk:hover {
+    background-color: #023e8a;
+}
+
+.rozwijanie {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.rozwijanie img {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease-out;
+}
+
+.rozwijanie img:hover {
+    transform: scale(1.05);
+}
+
+#rozkarp:checked+label+.rozwijanie {
+    transform: scaleX(1);
+}
+
+#rozsczupak:checked+label+.rozwijanie {
+    transform: scaleX(1);
+}
+
+#rozsum:checked+label+.rozwijanie {
+    transform: scaleX(1);
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+}
+
+footer a {
+    margin-left: 20px;
+    float: left;
+    color: white;
+}
