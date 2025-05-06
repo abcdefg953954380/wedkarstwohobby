@@ -93,3 +93,73 @@ footer {
         transform: translateX(0);
     }
 }
+
+/* Top 5 ryb*/
+
+.top5 {
+    padding: 20px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lista {
+    list-style: decimal;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.lista li {
+    margin: 12px 0;
+}
+
+.lista label {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Kolorwe napisy */
+
+.lista label:hover {
+    background: linear-gradient(to left, red, orange, yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: kolorowenapisy 2s linear infinite;
+    background-size: 200%;
+}
+
+@keyframes kolorowenapisy {
+    0% {
+        background-position: 0%
+    }
+
+    100% {
+        background-position: 200%
+    }
+}
+
+.obraz {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    position: absolute;
+    margin-left: 220px;
+    margin-top: 20px;
+}
+
+#karp:checked~.karp,
+#szczupak:checked~.szczupak,
+#sum:checked~.sum,
+#pstrag:checked~.pstrag,
+#leszcz:checked~.leszcz {
+    opacity: 1;
+    transform: scaleX(1);
+    bottom: 300px;
+}
